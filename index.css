@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* header部分 */
+header {
+  background-color: rgb(0, 20, 0);
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0px 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-logo {
+  color: white;
+  line-height: 50px;
+  font-size: 30px;
+}
+/* ハンバーガー部分 */
+.lines {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.line {
+  background-color: black;
+  width: 30px;
+  height: 5px;
+  margin: 3px 5px;
+  border-radius: 10px;
+  transition: 300ms;
+}
+
+.open .line1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 38%;
+}
+
+.open .line2 {
+  opacity: 0;
+}
+
+.open .line3 {
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: 38%;
+}
+
+/* サイドバー部分 */
+aside {
+  position: fixed;
+  right: -200px;
+  transition: 300ms;
+  background-color: rgba(0,0,0,0.5);
+  height: 100vh;
+  z-index: 1;
+  top: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+  width: 150px;
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+  border-radius: 5px;
+  border: 0.5px solid white;
+  background-color: black;
+  text-align: center;
+  margin-bottom: -1px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.open-aside {
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+menu a:hover{
+    background-color: yellow;
+    color: black;
+    opacity: 1;
+}
+
+.sub-menu{
+    display: none;
+}
+
+/* メイン部分 */
+.background-img {
+  background-image: url(./img/ダウンロード_waifu2x_art_noise1_scale_tta_1_waifu2x_art_noise3_scale_tta_1.png);
+  height: calc(100vh - 50px);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.main-logo {
+  width: 60%;
+  height: 0;
+  opacity: 0;
+}
+
+.main-logo-open{
+    height: 300px;
+    transition: 4s;
+    opacity: 1;
+}
+
+/* タブバー部分 */
+.is-show{
+  display: block;
+}
+
+.MS-introduction {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.image-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+
+.MS-image{
+  background-image: url(./img/e7ac0b22-5d21-45e8-b4ad-896f01b5b4c8.png);
+  background-size: cover;
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+
+.tab{
+  display: none;
+  overflow: hidden;
+}
+
+.is-show{
+  display: block;
+}
+
+.tab a{
+  color: black;
+}
+
+.tab a:hover{
+  color: white;
+}
+
+.MS-introduction h1{
+  position: relative;
+}
+
+.MS-introduction h1::after{
+  content:"";
+  display:block;
+  width:80px;
+  height:3px;
+  background-color:white;
+  position:absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* モーダルウィンドウ */
+.modal-window {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 50%;
+  height: 80%;
+  margin: 5% auto;
+}
+
+.modal-open{
+  display: block;
+}
+
+.close-btn a{
+  color: black;
+  border: 3px solid black;
+  background-color: white;
+  padding: 5px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.close-btn a:hover{
+  color: white;
+  background-color: black;
+}
+

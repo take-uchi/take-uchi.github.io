@@ -1,0 +1,32 @@
+@media (max-width: 560px) {
+  /* タブバー部分 */
+  .background-img {
+      background-position: center;
+  }
+  .main-logo {
+    width: 100%;
+  }
+  .main-logo-open {
+    height: 200px;
+  }
+
+
+  /* モーダルウィンドウ */
+  .modal-content{
+    width: 80%;
+    height: 80%;
+  }
+
+  .modal-img img{
+    width: 100%;
+  }
+
+  .close-btn{
+    margin-top: 30px;
+  }
+  
+  .close-btn a:active{
+    color: white;
+    background-color: black;
+  }
+}
